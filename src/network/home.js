@@ -6,3 +6,13 @@ export function getHomeMutiData(){
     url: '/home/multidata'
   })
 }
+// 获取首页商品数据
+export function getHomeData(config){
+  return get({
+    url: '/home/data',
+    params: {
+      type: config.type,
+      page: config.page
+    }
+  })
+}
